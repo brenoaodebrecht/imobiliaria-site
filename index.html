@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Página inicial</title>
+
+    <!-- Adicione este <style> logo acima do <nav> ou dentro do <head> do seu HTML -->
+    <style>
+      /* Customizações modernas para o Navbar */
+      .navbar-custom {
+        background-color: #ffffff; /* Fundo limpo */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+        transition: all 0.3s ease;
+      }
+
+      .navbar-custom .nav-link {
+        font-weight: 500;
+        color: #4a4a4a; /* Cinza escuro elegante */
+        transition: color 0.3s ease-in-out;
+        padding: 0.5rem 1rem !important;
+      }
+
+      /* Efeito hover usando a cor do seu projeto (warning/amarelo) */
+      .navbar-custom .nav-link:hover,
+      .navbar-custom .nav-link.active {
+        color: #D4AF37 !important;
+      }
+
+      /* Efeito de zoom suave no logo */
+      .navbar-brand img {
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Deixando o dropdown mais bonito */
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      /*Texto dourado*/
+      .text-gold {
+        color: #D4AF37 !important;
+      }
+
+      /*Texto com fundo dourado*/
+      .text-bg-gold {
+        color: #fff !important;
+        background-color: #D4AF37 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR MELHORADA -->
+    <!-- sticky-top faz o menu grudar no topo ao rolar a página -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
+      <div class="container">
+        <!-- Troquei container-fluid por container para centralizar melhor em telas grandes -->
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="src/img/essenza.png"
+            alt="Logo Essenza"
+            width="80"
+            height="80"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <!-- Botão Responsivo (Mobile) que faltava -->
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links da Navegação -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-2">
+            <li class="nav-item">
+              <a
+                class="nav-link active fs-5"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="src/pages/sobre.html">Sobre</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="src/pages/servicos_produtos.html"
+                >Serviços e Produtos</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fs-5"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Mais
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="src/pages/fluxograma.html"
+                    >Fluxograma / Prog. e Alg.</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="src/pages/equipe.html"
+                    >Equipe</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a
+                class="badge text-bg-warning" style="background-color: #D4AF37 !important; text-decoration: none; font-size: 1rem; padding: 0.5rem 0.8rem;"
+                href="src/pages/contatos.html"
+              >
+                Contato
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- corpo principal -->
+
+    <!-- Seção principal -->
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-3 fw-bold">
+            Bem-vindo à
+            <span class="text-gold"> Essenza </span>
+          </h1>
+
+          <p class="lead mt-3">
+            Um espaço dedicado à tecnologia, programação e inovação. Aqui você
+            encontrará conteúdos, projetos e informações desenvolvidos pela
+            nossa equipe.
+          </p>
+        </div>
+
+        <!-- Card de destaque -->
+
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="card shadow">
+            <div class="card-body text-center p-5">
+              <h2 class="card-title">Essenza</h2>
+
+              <p class="card-text">
+                Tecnologia, criatividade e conhecimento em um só lugar.
+              </p>
+
+              <span class="badge text-bg-gold"> Inovação </span>
+
+              <span class="badge text-bg-dark"> Tecnologia </span>
+
+              <span class="badge text-bg-secondary"> Programação </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separador -->
+
+    <div class="container">
+      <hr />
+    </div>
+
+    <!-- Seção de destaque -->
+
+    <div class="container pb-5">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-4">
+          <h2 class="display-6 fw-bold">Tecnologia e conhecimento</h2>
+
+          <p class="col-md-8 fs-5">
+            A Essenza busca unir criatividade e tecnologia para desenvolver
+            soluções e compartilhar conhecimento.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RODAPÉ -->
+
+    <footer class="py-4 bg-dark text-white text-center">
+      <div class="container">
+        <p class="mb-1">
+          <strong> Integrantes e Direitos autorais </strong>
+        </p>
+
+        <p class="mb-0 text-white-50">
+          © 2026 Breno Avino Odebrecht, Bruno Matheus Correa, David William
+          Arantes da Silva,
+        </p>
+
+        <p class="mb-0 text-white-50">
+          Cesar Henrique Ziburis, Diogo de Aquino Fairbanks Barbosa, Pablo
+          Vinicius Leite Saggio de Araújo. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
