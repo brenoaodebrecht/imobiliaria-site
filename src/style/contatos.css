@@ -1,0 +1,305 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E CORES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f8f8 0%, #eeeeee 100%);
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ==========================================================================
+   2. CONTAINER PREMIUM
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(176, 141, 87, 0.08), 0 5px 15px rgba(0, 0, 0, 0.03);
+    padding: 50px;
+    border-top: 5px solid #b08d57;
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #b08d57, transparent);
+}
+
+/* ==========================================================================
+   3. CABEÇALHO / NAV COM FOTO DA EMPRESA
+   ========================================================================== */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centraliza verticalmente a logo e os links */
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+}
+
+/* Alinha a imagem ao lado dos textos da logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a foto e o texto */
+}
+
+/* Estilização moderna para a foto da empresa */
+.logo-empresa {
+    width: 55px; /* Tamanho equilibrado para um logotipo */
+    height: 55px;
+    object-fit: cover; /* Garante que a foto não fique distorcida ou esticada */
+    border-radius: 50%; /* Deixa a foto redonda (estilo premium) */
+    border: 2px solid #b08d57; /* Borda fina dourada ao redor da foto */
+}
+
+.logo-text h1 {
+    color: #1a1a1a;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.sub-logo {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #b08d57;
+    letter-spacing: 2px;
+    display: block;
+    margin-top: 4px;
+}
+
+.nav-links a {
+    color: #777777;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-left: 25px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #b08d57;
+    border-bottom: 2px solid #b08d57;
+}
+
+/* ==========================================================================
+   4. CONTEÚDO PRINCIPAL (MAIN)
+   ========================================================================== */
+main {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.left h2 {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.left h2 span {
+    color: #b08d57;
+    font-style: italic;
+}
+
+.intro-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.info-block {
+    margin-bottom: 30px;
+}
+
+.info-block h3 {
+    color: #b08d57;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.info-block p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.phone-number {
+    font-size: 20px !important;
+    color: #1a1a1a !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Lado Direito - Formulário */
+.right {
+    flex: 1.2;
+    background: #fbfbfb;
+    padding: 40px;
+    border-radius: 6px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.right h2 {
+    color: #1a1a1a;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   5. INTERATIVIDADE DOS CAMPOS E BOTÃO
+   ========================================================================== */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.right input, .right textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #dddddd;
+    border-left: 3px solid #cccccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    color: #2b2b2b;
+    transition: all 0.3s ease;
+}
+
+.right input::placeholder, .right textarea::placeholder {
+    color: #aaaaaa;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.right input:focus, .right textarea:focus {
+    outline: none;
+    border-color: #b08d57;
+    border-left: 3px solid #b08d57;
+    box-shadow: 0 5px 15px rgba(176, 141, 87, 0.05);
+}
+
+button {
+    background-color: transparent;
+    color: #b08d57;
+    border: 2px solid #b08d57;
+    padding: 16px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+button:hover {
+    background-color: #b08d57;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(176, 141, 87, 0.2);
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    border-top: 1px solid #eaeaea;
+    padding-top: 30px;
+    text-align: center;
+}
+
+footer p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #999999;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE ULTRA (Celulares)
+   ========================================================================== */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .left {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .left h2 br {
+        display: none;
+    }
+
+    .right {
+        padding: 30px 20px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+    
+    /* Ajusta o topo para o celular colocando a logo acima dos links */
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .logo-container {
+        flex-direction: column; /* Foto em cima do texto no celular */
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+    }
+}

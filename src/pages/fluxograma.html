@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Página inicial</title>
+
+    <style>
+      /* CSS para garantir o layout correto e o footer sempre embaixo */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #f8f9fa; /* Fundo leve para destacar os cards brancos */
+      }
+
+      /* Estilo personalizado para os cards de imagem */
+      .card-img-container {
+        height: 250px; /* Altura fixa para manter os dois cards perfeitamente iguais */
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+      .card-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Enquadra os fluxogramas sem cortar as laterais ou textos */
+        padding: 10px; /* Espaço para o fluxograma não colar nas bordas do card */
+      }
+
+      /* CSS Puro do Footer */
+      footer {
+        width: 100%;
+        background-color: #ffffff; /* Fundo branco solicitado */
+        border-top: 1px solid #d1d5db; /* Linha divisória nítida */
+        text-align: center;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        margin-top: auto; /* Empurra o footer para o final da página se houver pouco conteúdo */
+      }
+
+      footer p {
+        color: #374151;
+        font-size: 13px;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        letter-spacing: 1px;
+        line-height: 1;
+      }
+    </style>
+
+    <style>
+      /* Customizações modernas para o Navbar */
+      .navbar-custom {
+        background-color: #ffffff; /* Fundo limpo */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+        transition: all 0.3s ease;
+      }
+
+      .navbar-custom .nav-link {
+        font-weight: 500;
+        color: #4a4a4a; /* Cinza escuro elegante */
+        transition: color 0.3s ease-in-out;
+        padding: 0.5rem 1rem !important;
+      }
+
+      /* Efeito hover usando a cor do seu projeto (warning/amarelo) */
+      .navbar-custom .nav-link:hover,
+      .navbar-custom .nav-link.active {
+        color: #ffc107 !important;
+      }
+
+      /* Efeito de zoom suave no logo */
+      .navbar-brand img {
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Deixando o dropdown mais bonito */
+      .dropdown-menu {
+        border: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR MELHORADA -->
+    <!-- sticky-top faz o menu grudar no topo ao rolar a página -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
+      <div class="container">
+        <!-- Troquei container-fluid por container para centralizar melhor em telas grandes -->
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="./../../index.html">
+          <img
+            src="./../img/essenza.png"
+            alt="Logo Essenza"
+            width="80"
+            height="80"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <!-- Botão Responsivo (Mobile) que faltava -->
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links da Navegação -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-2">
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5"
+                aria-current="page"
+                href="./../../index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="sobre.html">Sobre</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="servicos_produtos.html"
+                >Serviços e Produtos</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle fs-5"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Mais
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="fluxograma.html"
+                    ><strong>Fluxograma / Prog. e Alg.</strong></a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="equipe.html">Equipe</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Transformei o Contato em um Botão de Destaque (Call to Action) -->
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <a
+                class="btn btn-warning fw-bold px-4 py-2 rounded-pill shadow-sm"
+                href="contatos.html"
+              >
+                Contato
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL CENTRALIZADO -->
+    <main
+      class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="row row-cols-1 row-cols-md-2 g-4 w-100"
+        style="max-width: 900px"
+      >
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-container">
+              <img src="./../img/fluxo1.png" alt="fluxograma 1" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-dark">Fluxograma 1</h5>
+              <p class="card-text text-muted">
+                Esse fluxograma demonstra de uma forma simplificada como é o
+                funcionamento desse site.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <div class="card-img-container">
+              <img src="./../img/fluxo2.png" alt="fluxograma 2" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-dark">Fluxograma 2</h5>
+              <p class="card-text text-muted">
+                Esse fluxograma demonstra de uma forma mais complexa e
+                explicativa o funcionamento desse site.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER PADRONIZADO -->
+    <footer>
+      <p>&copy; 2026 - Essenza Imóveis. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
