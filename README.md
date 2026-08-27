@@ -36,3 +36,15 @@ O desenvolvimento do site foi dividido entre os membros da equipe da seguinte ma
 
 © 2026 - Essenza Imóveis, Todos os direitos reservados.
 Projeto acadêmico desenvolvido para a disciplina de Programação Web.
+
+
+---------> Comandos github principal <---------
+
+Podemos verificar a situação atual com:
+git status
+
+Depois, adicionar os arquivos:
+git add .
+
+E criar o commit:
+git commit -m "(nome das mudanças)"
