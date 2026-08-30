@@ -1,4 +1,4 @@
-# Essenza Imóveis - Projeto PW
+# Essenza Imóveis - Projeto PW - 1.15
 
 Este repositório contém o projeto de Programação Web (PW) da equipe Essenza Imóveis, uma plataforma imobiliária desenvolvida para a nossa escola.
 
@@ -48,3 +48,5 @@ git add .
 
 E criar o commit:
 git commit -m "(nome das mudanças)"
+
+adiciona uma aba de compra no serviços e produtos
