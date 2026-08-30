@@ -1,0 +1,417 @@
+/* =========================================================
+   PÁGINA DE COMPRA DO IMÓVEL
+   ========================================================= */
+
+.purchase-page {
+    padding: 40px max(5%, calc((100vw - var(--container-width)) / 2)) 90px;
+
+    background: var(--color-bg);
+}
+
+.purchase-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.purchase-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-bottom: 28px;
+
+    color: var(--color-text-light);
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.purchase-breadcrumb:hover {
+    color: var(--color-gold);
+}
+
+
+/* =========================================================
+   ESTADO VAZIO (nenhum imóvel selecionado)
+   ========================================================= */
+
+.purchase-empty {
+    max-width: 560px;
+    margin: 60px auto;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    background: var(--color-white);
+    border: 1px solid var(--border-light);
+}
+
+.purchase-empty h1 {
+    margin: 0 0 12px;
+
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.purchase-empty p {
+    margin: 0 0 24px;
+
+    color: var(--color-text-light);
+}
+
+.purchase-empty-button {
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    background: var(--color-gold);
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.purchase-empty-button:hover {
+    background: #96743f;
+}
+
+
+/* =========================================================
+   LAYOUT PRINCIPAL
+   ========================================================= */
+
+.purchase-grid {
+    display: grid;
+    grid-template-columns: 42% 58%;
+
+    gap: 40px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   RESUMO DO IMÓVEL
+   ========================================================= */
+
+.purchase-summary {
+    position: sticky;
+    top: 100px;
+
+    background: var(--color-white);
+    border: 1px solid var(--border-light);
+
+    box-shadow: var(--shadow-card);
+}
+
+.purchase-summary-image {
+    position: relative;
+
+    height: 320px;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+.purchase-summary-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.purchase-summary-image > span {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    padding: 9px 14px;
+
+    background: var(--color-white);
+    color: var(--color-text);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.purchase-location {
+    margin: 24px 26px 8px;
+
+    color: var(--color-gold);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.purchase-summary h1 {
+    margin: 0 26px;
+
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.purchase-category {
+    margin: 12px 26px 24px;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+.purchase-price {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin: 0 26px;
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.purchase-price span {
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.purchase-price strong {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.purchase-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 24px 26px 30px;
+}
+
+.purchase-details > div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+
+    border: 1px solid var(--border-light);
+
+    background: #fbfaf7;
+}
+
+.purchase-detail-icon {
+    margin-bottom: 8px;
+
+    color: var(--color-gold);
+
+    font-size: 1.3rem;
+}
+
+.purchase-details strong {
+    color: var(--color-text);
+
+    font-size: 1.05rem;
+}
+
+.purchase-details small {
+    margin-top: 3px;
+
+    color: var(--color-muted);
+
+    font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   FORMULÁRIO DE COMPRA
+   ========================================================= */
+
+.purchase-form-section {
+    padding: 40px;
+
+    background: var(--color-white);
+    border: 1px solid var(--border-light);
+
+    box-shadow: var(--shadow-card);
+}
+
+.purchase-form-section h2 {
+    margin: 0 0 10px;
+
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.purchase-form-subtitle {
+    margin: 0 0 30px;
+
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.purchase-input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 20px;
+}
+
+.purchase-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.purchase-input-group label {
+    color: var(--color-text);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.purchase-field-hint {
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+}
+
+.purchase-input-group input,
+.purchase-input-group select,
+.purchase-input-group textarea {
+    padding: 13px 15px;
+
+    border: 1px solid var(--border-medium);
+    background: var(--color-bg);
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--color-text);
+
+    resize: vertical;
+}
+
+.purchase-input-group input:focus,
+.purchase-input-group select:focus,
+.purchase-input-group textarea:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.purchase-submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 16px 22px;
+
+    border: 0;
+
+    background: var(--color-gold);
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.purchase-submit-button:hover {
+    background: #96743f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MENSAGEM DE SUCESSO
+   ========================================================= */
+
+.purchase-success {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #fbfaf7;
+    border: 1px solid var(--border-light);
+}
+
+.purchase-success h3 {
+    margin: 0 0 10px;
+
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    color: var(--color-text);
+}
+
+.purchase-success p {
+    margin: 0 0 20px;
+
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .purchase-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .purchase-summary {
+        position: static;
+    }
+
+    .purchase-input-row {
+        grid-template-columns: 1fr;
+    }
+
+    .purchase-form-section {
+        padding: 28px 22px;
+    }
+}

@@ -922,3 +922,454 @@ select {
         font-size: 0.63rem;
     }
 }
+/* =========================================================
+   21. MODAL DE DETALHES DO IMÓVEL
+   ========================================================= */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+#property-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+#property-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Fundo escuro */
+
+.property-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(10, 25, 40, 0.72);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* Card principal */
+
+.property-modal-card {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    width: min(1050px, 100%);
+    max-height: 90vh;
+
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(25px) scale(0.97);
+
+    transition:
+        transform 0.35s ease;
+}
+
+#property-modal.active .property-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+
+/* Imagem */
+
+.property-modal-image {
+    position: relative;
+
+    min-height: 620px;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+.property-modal-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.property-modal-image > span {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    padding: 9px 14px;
+
+    background: var(--color-white);
+    color: var(--color-text);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+
+/* Botão fechar */
+
+.property-modal-close {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 18px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: var(--color-text);
+
+    cursor: pointer;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.property-modal-close:hover {
+    background: var(--color-gold);
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* Conteúdo */
+
+.property-modal-content {
+    padding: 55px 55px 45px;
+
+    overflow-y: auto;
+}
+
+
+/* Localização */
+
+.property-modal-location {
+    margin: 0 0 10px;
+
+    color: var(--color-gold);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* Título */
+
+.property-modal-content h2 {
+    margin: 0;
+
+    max-width: 500px;
+
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+
+    font-size: clamp(2rem, 4vw, 3.1rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+}
+
+
+/* Categoria */
+
+.property-modal-category {
+    margin: 14px 0 30px;
+
+    color: var(--color-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* Preço */
+
+.property-modal-price {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.property-modal-price span {
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.property-modal-price strong {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+}
+
+
+/* Detalhes */
+
+.property-modal-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin: 28px 0;
+}
+
+.property-modal-details > div {
+    display: flex;
+    flex-direction: column;
+
+    padding: 17px;
+
+    border: 1px solid var(--border-light);
+
+    background: #fbfaf7;
+}
+
+.modal-detail-icon {
+    margin-bottom: 8px;
+
+    color: var(--color-gold);
+
+    font-size: 1.4rem;
+}
+
+.property-modal-details strong {
+    color: var(--color-text);
+
+    font-size: 1.1rem;
+}
+
+.property-modal-details small {
+    margin-top: 3px;
+
+    color: var(--color-muted);
+
+    font-size: 0.7rem;
+}
+
+
+/* Descrição */
+
+.property-modal-description {
+    margin-bottom: 30px;
+}
+
+.property-modal-description h3 {
+    margin: 0 0 10px;
+
+    font-family: var(--font-display);
+
+    font-size: 1.35rem;
+
+    font-weight: 500;
+}
+
+.property-modal-description p {
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* Botões */
+
+.property-modal-actions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.property-buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 0;
+
+    background: var(--color-gold);
+    color: white;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.property-buy-button:hover {
+    background: #96743f;
+
+    transform: translateY(-2px);
+}
+
+.property-buy-button span {
+    font-size: 1.2rem;
+}
+
+.property-back-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid var(--border-medium);
+
+    background: transparent;
+    color: var(--color-text-light);
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.property-back-button:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE DO MODAL
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    #property-modal {
+        padding: 15px;
+    }
+
+    .property-modal-card {
+        display: block;
+
+        max-height: 94vh;
+
+        overflow-y: auto;
+    }
+
+    .property-modal-image {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .property-modal-content {
+        padding: 35px 25px 30px;
+    }
+
+    .property-modal-content h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    #property-modal {
+        padding: 8px;
+    }
+
+    .property-modal-card {
+        max-height: 96vh;
+    }
+
+    .property-modal-image {
+        height: 230px;
+        min-height: 230px;
+    }
+
+    .property-modal-content {
+        padding: 30px 20px 25px;
+    }
+
+    .property-modal-details {
+        gap: 7px;
+    }
+
+    .property-modal-details > div {
+        padding: 12px;
+    }
+
+    .property-modal-price strong {
+        font-size: 1.7rem;
+    }
+
+}
