@@ -20,30 +20,27 @@
     <title>Página inicial</title>
 
     <style>
-      /* CSS para garantir o layout correto e o footer sempre embaixo */
       html,
       body {
         height: 100%;
         margin: 0;
         display: flex;
         flex-direction: column;
-        background-color: #f8f9fa; /* Fundo leve para destacar os cards brancos */
+        background-color: #f8f9fa;
       }
 
-      /*Texto dourado*/
       .text-gold {
-        color: #D4AF37 !important;
+        color: #d4af37 !important;
       }
 
-      /*Texto com fundo dourado*/
       .text-bg-gold {
         color: #fff !important;
-        background-color: #D4AF37 !important;
+        background-color: #d4af37 !important;
       }
 
-      /* Estilo personalizado para os cards de imagem */
+      /* CARDS */
       .card-img-container {
-        height: 250px; /* Altura fixa para manter os dois cards perfeitamente iguais */
+        height: clamp(400px, 60vh, 700px);
         overflow: hidden;
         background-color: #f0f0f0;
       }
@@ -51,19 +48,38 @@
       .card-img-container img {
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Enquadra os fluxogramas sem cortar as laterais ou textos */
-        padding: 10px; /* Espaço para o fluxograma não colar nas bordas do card */
+        object-fit: contain;
+        padding: 20px;
       }
 
-      /* CSS Puro do Footer */
+      .card {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        padding: 30px;
+      }
+
+      .card-title {
+        font-size: clamp(1.3rem, 2vw, 1.8rem);
+      }
+
+      .card-text {
+        font-size: clamp(1rem, 1.3vw, 1.15rem);
+      }
+
+      /* FOOTER */
       footer {
         width: 100%;
-        background-color: #ffffff; /* Fundo branco solicitado */
-        border-top: 1px solid #d1d5db; /* Linha divisória nítida */
+        background-color: #ffffff;
+        border-top: 1px solid #d1d5db;
         text-align: center;
         padding: 25px 20px;
         box-sizing: border-box;
-        margin-top: auto; /* Empurra o footer para o final da página se houver pouco conteúdo */
+        margin-top: auto;
       }
 
       footer p {
@@ -74,30 +90,26 @@
         letter-spacing: 1px;
         line-height: 1;
       }
-    </style>
 
-    <style>
-      /* Customizações modernas para o Navbar */
+      /* NAVBAR */
       .navbar-custom {
-        background-color: #ffffff; /* Fundo limpo */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+        background-color: #ffffff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         transition: all 0.3s ease;
       }
 
       .navbar-custom .nav-link {
         font-weight: 500;
-        color: #4a4a4a; /* Cinza escuro elegante */
+        color: #4a4a4a;
         transition: color 0.3s ease-in-out;
         padding: 0.5rem 1rem !important;
       }
 
-      /* Efeito hover usando a cor do seu projeto (warning/amarelo) */
       .navbar-custom .nav-link:hover,
       .navbar-custom .nav-link.active {
-        color: #D4AF37 !important;
+        color: #d4af37 !important;
       }
 
-      /* Efeito de zoom suave no logo */
       .navbar-brand img {
         transition: transform 0.3s ease;
       }
@@ -106,23 +118,53 @@
         transform: scale(1.05);
       }
 
-      /* Deixando o dropdown mais bonito */
       .dropdown-menu {
         border: none;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
       }
+
+      /* RESPONSIVIDADE */
+      @media (max-width: 768px) {
+        .card-img-container {
+          height: 400px;
+        }
+
+        .card-img-container img {
+          padding: 15px;
+        }
+
+        .card-body {
+          padding: 25px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .card-img-container {
+          height: 320px;
+        }
+
+        .card-img-container img {
+          padding: 10px;
+        }
+
+        .card-body {
+          padding: 20px;
+        }
+
+        footer p {
+          font-size: 11px;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- NAVBAR MELHORADA -->
-    <!-- sticky-top faz o menu grudar no topo ao rolar a página -->
+
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
       <div class="container">
-        <!-- Troquei container-fluid por container para centralizar melhor em telas grandes -->
 
-        <!-- Logo -->
         <a class="navbar-brand" href="./../../index.html">
           <img
             src="./../img/essenza.png"
@@ -133,7 +175,6 @@
           />
         </a>
 
-        <!-- Botão Responsivo (Mobile) que faltava -->
         <button
           class="navbar-toggler border-0 shadow-none"
           type="button"
@@ -146,29 +187,32 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Links da Navegação -->
         <div
           class="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
           <ul class="navbar-nav align-items-center gap-2">
+
             <li class="nav-item">
               <a
                 class="nav-link fs-5"
                 aria-current="page"
                 href="./../../index.html"
-                >Home</a
               >
+                Home
+              </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link fs-5" href="sobre.html">Sobre</a>
+              <a class="nav-link fs-5" href="sobre.html">
+                Sobre
+              </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link fs-5" href="servicos_produtos.html"
-                >Serviços e Produtos</a
-              >
+              <a class="nav-link fs-5" href="servicos_produtos.html">
+                Serviços e Produtos
+              </a>
             </li>
 
             <li class="nav-item dropdown">
@@ -181,78 +225,114 @@
               >
                 Mais
               </a>
+
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="fluxograma.html"
-                    ><strong>Fluxograma / Prog. e Alg.</strong></a
+                  <a
+                    class="dropdown-item"
+                    href="fluxograma.html"
                   >
+                    <strong>Fluxograma / Prog. e Alg.</strong>
+                  </a>
                 </li>
-                <li><hr class="dropdown-divider" /></li>
+
                 <li>
-                  <a class="dropdown-item" href="equipe.html">Equipe</a>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="equipe.html">
+                    Equipe
+                  </a>
                 </li>
               </ul>
             </li>
 
-            <!-- Transformei o Contato em um Botão de Destaque (Call to Action) -->
             <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
               <a
-                class="badge text-bg-warning" style="background-color: #D4AF37 !important; text-decoration: none; font-size: 1rem; padding: 0.5rem 0.8rem;"
+                class="badge text-bg-warning"
+                style="
+                  background-color: #d4af37 !important;
+                  text-decoration: none;
+                  font-size: 1rem;
+                  padding: 0.5rem 0.8rem;
+                "
                 href="contatos.html"
               >
                 Contato
               </a>
             </li>
+
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- CONTEÚDO PRINCIPAL CENTRALIZADO -->
-    <main
-      class="container my-5 flex-grow-1 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="row row-cols-1 row-cols-md-2 g-4 w-100"
-        style="max-width: 900px"
-      >
-        <!-- Card 1 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container-fluid my-5 flex-grow-1 px-3 px-md-4">
+
+      <!-- CARDS UM EMBAIXO DO OUTRO -->
+      <div class="row g-5">
+
+        <!-- CARD 1 -->
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+
             <div class="card-img-container">
-              <img src="./../img/fluxo1.png" alt="fluxograma 1" />
+              <img
+                src="./../img/mer.png"
+                alt="Fluxograma 1"
+              />
             </div>
+
             <div class="card-body">
-              <h5 class="card-title fw-bold text-dark">Fluxograma 1</h5>
-              <p class="card-text text-muted">
+              <h5 class="card-title fw-bold text-dark">
+                Fluxograma 1
+              </h5>
+
+              <p class="card-text text-muted mb-0">
                 Esse fluxograma demonstra de uma forma simplificada como é o
                 funcionamento desse site.
               </p>
             </div>
+
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
+        <!-- CARD 2 -->
+        <div class="col-12">
+          <div class="card shadow-sm h-100">
+
             <div class="card-img-container">
-              <img src="./../img/fluxo2.png" alt="fluxograma 2" />
+              <img
+                src="./../img/der.png"
+                alt="Fluxograma 2"
+              />
             </div>
+
             <div class="card-body">
-              <h5 class="card-title fw-bold text-dark">Fluxograma 2</h5>
-              <p class="card-text text-muted">
+              <h5 class="card-title fw-bold text-dark">
+                Fluxograma 2
+              </h5>
+
+              <p class="card-text text-muted mb-0">
                 Esse fluxograma demonstra de uma forma mais complexa e
                 explicativa o funcionamento desse site.
               </p>
             </div>
+
           </div>
         </div>
+
       </div>
     </main>
 
-    <!-- FOOTER PADRONIZADO -->
+    <!-- FOOTER -->
     <footer>
-      <p>&copy; 2026 - Essenza Imóveis. Todos os direitos reservados.</p>
+      <p>
+        © 2026 - Essenza Imóveis. Todos os direitos reservados.
+      </p>
     </footer>
+
   </body>
 </html>
