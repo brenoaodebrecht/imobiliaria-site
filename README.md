@@ -7,7 +7,7 @@ Este repositório contém o projeto de Programação Web (PW) da equipe Essenza 
 O design do projeto utiliza as seguintes cores principais:
 
 - **Escuro:** `#000000` (Preto)
-- **Dourado:** `#b08d57` (Detalhes e destaques)
+- **Dourado:** `#D4AF37` (Detalhes e destaques)
 - **Branco:** `#f8f8f8` (Fundo e contraste)
 
 ## Equipe e Divisão de Tarefas
