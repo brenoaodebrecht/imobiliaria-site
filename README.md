@@ -49,4 +49,4 @@ git add .
 E criar o commit:
 git commit -m "(nome das mudanças)"
 
-Essa versão (1.20), adiciona uma melhora no visual do home
+Essa versão (1.30), adiciona uma melhora no visual do footer, também adicionarei uma melhora nos cards da "Equipe"
