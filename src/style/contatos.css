@@ -168,6 +168,14 @@ main {
     letter-spacing: 0.5px;
 }
 
+.phone-number-div{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
 /* Lado Direito - Formulário */
 .right {
     flex: 1.2;
