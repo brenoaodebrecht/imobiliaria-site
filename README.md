@@ -1,6 +1,6 @@
-# Essenza Imóveis - Projeto PW - 1.20
+# Essenza Imóveis - Projeto Multidiciplinar
 
-Este repositório contém o projeto de Programação Web (PW) da equipe Essenza Imóveis, uma plataforma imobiliária desenvolvida para a nossa escola.
+Este repositório contém o projeto multidiciplinar da equipe Essenza Imóveis, uma plataforma imobiliária desenvolvida para a nossa escola.
 
 ## Paleta de Cores
 
@@ -14,12 +14,12 @@ O design do projeto utiliza as seguintes cores principais:
 
 O desenvolvimento do site foi dividido entre os membros da equipe da seguinte maneira:
 
-- **[Nome/Perfil do Github do Breno]** (Breno) - 1. Página inicial (`index.html`)
-- **[Nome/Perfil do Github do Bruno]** (Bruno) - 2. Página Sobre (`src/pages/sobre.html`)
-- **[Nome/Perfil do Github do David]** (David) - 3. Página Serviços/Produtos (`src/pages/servicos_produtos.html`)
-- **[https://github.com/cesarziburis]** (Cesar) - 4. Página de Contato (`src/pages/contatos.html`)
-- **[Nome/Perfil do Github do Pablo]** (Pablo) - 5. Página DER e Fluxograma (`src/pages/fluxograma.html`)
-- **[Nome/Perfil do Github do Diogo]** (Diogo) - 6. Página da Equipe (`src/pages/equipe.html`)
+- (Breno) - 1. Página inicial (`index.html`)
+- (Bruno) - 2. Página Sobre (`src/pages/sobre.html`)
+- (David) - 3. Página Serviços/Produtos (`src/pages/servicos_produtos.html`)
+- (Cesar) - 4. Página de Contato (`src/pages/contatos.html`)
+- (Pablo) - 5. Página DER e Fluxograma (`src/pages/fluxograma.html`)
+- (Diogo) - 6. Página da Equipe (`src/pages/equipe.html`)
 
 ## Tecnologias Utilizadas
 
@@ -34,8 +34,7 @@ O desenvolvimento do site foi dividido entre os membros da equipe da seguinte ma
 
 ## Licença e Direitos Autorais
 
-© 2026 - Essenza Imóveis, Todos os direitos reservados.
-Projeto acadêmico desenvolvido para a disciplina de Programação Web.
+O projeto é totalmente fictício, sem nenhum direito real reservado e contém informações irreais.
 
 
 ---------> Comandos github principal <---------
@@ -48,5 +47,3 @@ git add .
 
 E criar o commit:
 git commit -m "(nome das mudanças)"
-
-Essa versão (1.30), adiciona uma melhora no visual do footer, também adicionarei uma melhora nos cards da "Equipe"
