@@ -79,13 +79,15 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sa
 }
 .section-heading > p:last-child { margin: 0; color: var(--muted); line-height: 1.7; }
 
-.service-detail-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px;
-}
+/* Cards de serviço (Bootstrap .card): imagem no topo + corpo com o conteúdo */
 .service-detail {
-  position: relative; padding: 32px; background: #fff; border: 1px solid var(--border);
+  --bs-card-border-radius: 0;
+  position: relative; padding: 0; border-radius: 0; background: #fff; border: 1px solid var(--border);
   box-shadow: 0 5px 20px rgba(32,47,59,.06); transition: .28s ease; scroll-margin-top: 100px;
 }
+.service-media { background: #efe9df; border-bottom: 1px solid var(--border); }
+.service-media img { border-radius: 0; }
+.service-detail-body { padding: 32px; }
 .service-detail:hover { transform: translateY(-5px); border-color: rgba(176,141,87,.55); box-shadow: 0 15px 35px rgba(32,47,59,.11); }
 .service-detail-top { display: flex; justify-content: space-between; align-items: start; margin-bottom: 22px; }
 .detail-number { color: #aaa39a; font-weight: 700; font-size: .75rem; letter-spacing: .08em; }
@@ -94,7 +96,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sa
   border: 1px solid rgba(176,141,87,.45); color: var(--gold); font-size: 1.5rem;
 }
 .service-detail h3 { margin: 0 0 12px; font-family: "Playfair Display",serif; font-size: 1.6rem; font-weight: 500; }
-.service-detail > p { min-height: 75px; color: var(--muted); line-height: 1.7; }
+.service-detail-body > p { min-height: 75px; color: var(--muted); line-height: 1.7; }
 .service-detail ul { margin: 0 0 24px; padding-left: 19px; color: var(--text); line-height: 1.9; }
 .service-detail a { color: var(--gold); font-weight: 700; text-decoration: none; font-size: .88rem; }
 
@@ -139,7 +141,7 @@ footer p { margin: 3px 0; color: #69727a; font-size: .8rem; }
 #back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 
 @media (max-width: 850px) {
-  .service-detail-grid, .process-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
   .services-hero { min-height: 500px; }
   .services-cta { flex-direction: column; align-items: flex-start; }
 }
@@ -147,5 +149,5 @@ footer p { margin: 3px 0; color: #69727a; font-size: .8rem; }
   .services-hero { padding: 70px 7%; }
   .services-hero h1 { font-size: 3rem; }
   .service-list-section, .faq-section { padding-top: 65px; padding-bottom: 65px; }
-  .service-detail { padding: 25px; }
+  .service-detail-body { padding: 25px; }
 }
