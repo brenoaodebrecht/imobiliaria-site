@@ -3,7 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./../style/contatos.css" />
+    <!-- Mantém o visual original da página com o Bootstrap carregado -->
+    <style>
+      body { line-height: normal; }
+      h1, h2, h3, p { margin: 0; }
+      .info-block h3 { font-weight: bold; }
+      img { vertical-align: baseline; }
+    </style>
     <title>Contatos</title>
   </head>
   <body>
@@ -101,5 +112,67 @@
         <p>&copy; 2026 - Essenza Imóveis. Todos os direitos reservados.</p>
       </footer>
     </div>
+
+    <!-- Card de confirmação de envio (Bootstrap) -->
+    <div
+      id="cardEnviado"
+      class="position-fixed top-0 start-0 w-100 h-100 d-none align-items-center justify-content-center bg-dark bg-opacity-50 p-3"
+      style="z-index: 1080"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cardEnviadoTitulo"
+    >
+      <div class="card text-center shadow-lg border-0" style="max-width: 460px">
+        <div class="card-body p-4 p-md-5">
+          <h2 id="cardEnviadoTitulo" class="card-title display-6 fw-bold mb-3">
+            Mensagem enviada
+          </h2>
+          <p class="card-text text-secondary lh-base mb-4">
+            Sua mensagem foi computada e está chegando em nossa equipe em
+            momentos. Seja paciente e te responderemos pelo e-mail em breve.
+          </p>
+          <button
+            type="button"
+            id="btnFecharCard"
+            class="btn btn-dark"
+            style="
+              --bs-btn-bg: #b08d57;
+              --bs-btn-border-color: #b08d57;
+              --bs-btn-hover-bg: #8f7040;
+              --bs-btn-hover-border-color: #8f7040;
+              --bs-btn-active-bg: #8f7040;
+              --bs-btn-active-border-color: #8f7040;
+            "
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const formContato = document.querySelector("form.right");
+      const cardEnviado = document.getElementById("cardEnviado");
+      const btnFecharCard = document.getElementById("btnFecharCard");
+
+      function abrirCard() {
+        cardEnviado.classList.remove("d-none");
+        cardEnviado.classList.add("d-flex");
+        btnFecharCard.focus();
+      }
+
+      function fecharCard() {
+        cardEnviado.classList.remove("d-flex");
+        cardEnviado.classList.add("d-none");
+      }
+
+      formContato.addEventListener("submit", function (e) {
+        e.preventDefault(); // não envia nada nem recarrega a página
+        abrirCard();
+        formContato.reset();
+      });
+
+      btnFecharCard.addEventListener("click", fecharCard);
+    </script>
   </body>
 </html>

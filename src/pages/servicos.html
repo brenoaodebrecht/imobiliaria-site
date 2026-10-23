@@ -26,7 +26,8 @@
         <ul class="navbar-nav align-items-center gap-2">
           <li class="nav-item"><a class="nav-link fs-5" href="./../../index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link fs-5" href="sobre.html">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link active fs-5" href="servicos_produtos.html">Serviços e Produtos</a></li>
+          <li class="nav-item"><a class="nav-link active fs-5" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link fs-5" href="servicos_produtos.html">Produtos</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown">Mais</a>
             <ul class="dropdown-menu">
@@ -63,66 +64,103 @@
         <p>Escolha uma área para conhecer melhor como podemos ajudar.</p>
       </div>
 
-      <div class="service-detail-grid">
-        <article class="service-detail" id="compra-venda">
-          <div class="service-detail-top">
-            <span class="detail-number">01</span>
-            <span class="detail-icon">⌂</span>
-          </div>
-          <h3>Compra e venda</h3>
-          <p>Acompanhamento da busca ao fechamento, com informações organizadas para facilitar cada etapa.</p>
-          <ul>
-            <li>Busca de imóveis</li>
-            <li>Agendamento de visitas</li>
-            <li>Orientação durante a negociação</li>
-          </ul>
-          <a href="contatos.html">Falar com um especialista →</a>
-        </article>
+      <div class="row g-4 service-detail-grid">
+        <div class="col-12 col-md-6">
+          <article class="card service-detail h-100" id="compra-venda">
+            <!-- Espaço da imagem: troque o src do <img> pela foto do serviço -->
+            <div class="service-media ratio ratio-16x9">
+              <img src="./../img/compra_venda.png" class="card-img-top object-fit-cover" alt="Imagem do serviço: Compra e venda de imóveis" loading="lazy">
+            </div>
 
-        <article class="service-detail" id="locacao">
-          <div class="service-detail-top">
-            <span class="detail-number">02</span>
-            <span class="detail-icon">▣</span>
-          </div>
-          <h3>Locação</h3>
-          <p>Soluções para quem procura um imóvel para alugar, com atendimento durante o processo.</p>
-          <ul>
-            <li>Pesquisa de opções</li>
-            <li>Visitas e informações do imóvel</li>
-            <li>Orientação sobre o processo de locação</li>
-          </ul>
-          <a href="contatos.html">Falar com um especialista →</a>
-        </article>
+            <div class="card-body service-detail-body d-flex flex-column">
+              <div class="service-detail-top">
+                <span class="detail-number">01</span>
+                <span class="detail-icon">⌂</span>
+              </div>
+              <h3>Compra e venda</h3>
+              <p>Acompanhamento da busca ao fechamento, com informações organizadas para facilitar cada etapa.</p>
+              <ul>
+              <li>Busca de imóveis</li>
+              <li>Agendamento de visitas</li>
+              <li>Orientação durante a negociação</li>
+              </ul>
+              <a class="mt-auto" href="contatos.html">Falar com um especialista →</a>
+            </div>
+          </article>
+        </div>
 
-        <article class="service-detail" id="avaliacao">
-          <div class="service-detail-top">
-            <span class="detail-number">03</span>
-            <span class="detail-icon">◇</span>
-          </div>
-          <h3>Avaliação de imóvel</h3>
-          <p>Uma análise organizada das características do imóvel e de referências disponíveis para apoiar sua decisão.</p>
-          <ul>
-            <li>Análise das características</li>
-            <li>Referências de mercado</li>
-            <li>Informações para negociação</li>
-          </ul>
-          <a href="contatos.html">Solicitar atendimento →</a>
-        </article>
+        <div class="col-12 col-md-6">
+          <article class="card service-detail h-100" id="locacao">
+            <!-- Espaço da imagem: troque o src do <img> pela foto do serviço -->
+            <div class="service-media ratio ratio-16x9">
+              <img src="./../img/locacao.png" class="card-img-top object-fit-cover" alt="Imagem do serviço: Locação de imóveis" loading="lazy">
+            </div>
 
-        <article class="service-detail" id="consultoria">
-          <div class="service-detail-top">
-            <span class="detail-number">04</span>
-            <span class="detail-icon">✦</span>
-          </div>
-          <h3>Consultoria imobiliária</h3>
-          <p>Atendimento personalizado para entender seu objetivo e organizar os próximos passos.</p>
-          <ul>
-            <li>Definição do perfil de busca</li>
-            <li>Orientação de opções</li>
-            <li>Acompanhamento personalizado</li>
-          </ul>
-          <a href="contatos.html">Conversar com a Essenza →</a>
-        </article>
+            <div class="card-body service-detail-body d-flex flex-column">
+              <div class="service-detail-top">
+                <span class="detail-number">02</span>
+                <span class="detail-icon">▣</span>
+              </div>
+              <h3>Locação</h3>
+              <p>Soluções para quem procura um imóvel para alugar, com atendimento durante o processo.</p>
+              <ul>
+              <li>Pesquisa de opções</li>
+              <li>Visitas e informações do imóvel</li>
+              <li>Orientação sobre o processo de locação</li>
+              </ul>
+              <a class="mt-auto" href="contatos.html">Falar com um especialista →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card service-detail h-100" id="avaliacao">
+            <!-- Espaço da imagem: troque o src do <img> pela foto do serviço -->
+            <div class="service-media ratio ratio-16x9">
+              <img src="./../img/avaliacao.png" class="card-img-top object-fit-cover" alt="Imagem do serviço: Avaliação de imóvel" loading="lazy">
+            </div>
+
+            <div class="card-body service-detail-body d-flex flex-column">
+              <div class="service-detail-top">
+                <span class="detail-number">03</span>
+                <span class="detail-icon">◇</span>
+              </div>
+              <h3>Avaliação de imóvel</h3>
+              <p>Uma análise organizada das características do imóvel e de referências disponíveis para apoiar sua decisão.</p>
+              <ul>
+              <li>Análise das características</li>
+              <li>Referências de mercado</li>
+              <li>Informações para negociação</li>
+              </ul>
+              <a class="mt-auto" href="contatos.html">Solicitar atendimento →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card service-detail h-100" id="consultoria">
+            <!-- Espaço da imagem: troque o src do <img> pela foto do serviço -->
+            <div class="service-media ratio ratio-16x9">
+              <img src="./../img/consultoria.jpg" class="card-img-top object-fit-cover" alt="Imagem do serviço: Consultoria imobiliária" loading="lazy">
+            </div>
+
+            <div class="card-body service-detail-body d-flex flex-column">
+              <div class="service-detail-top">
+                <span class="detail-number">04</span>
+                <span class="detail-icon">✦</span>
+              </div>
+              <h3>Consultoria imobiliária</h3>
+              <p>Atendimento personalizado para entender seu objetivo e organizar os próximos passos.</p>
+              <ul>
+              <li>Definição do perfil de busca</li>
+              <li>Orientação de opções</li>
+              <li>Acompanhamento personalizado</li>
+              </ul>
+              <a class="mt-auto" href="contatos.html">Conversar com a Essenza →</a>
+            </div>
+          </article>
+        </div>
+
       </div>
     </section>
 
