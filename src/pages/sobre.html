@@ -12,6 +12,8 @@
       crossorigin="anonymous"
     />
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -70,103 +72,109 @@
   </head>
 
   <body>
-    <!-- NAVBAR MELHORADA -->
-    <!-- sticky-top faz o menu grudar no topo ao rolar a página -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
-      <div class="container">
-        <!-- Troquei container-fluid por container para centralizar melhor em telas grandes -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top py-2">
+        <div class="container">
+          <!-- Troquei container-fluid por container para centralizar melhor em telas grandes -->
 
-        <!-- Logo -->
-        <a class="navbar-brand" href="./../../index.html">
-          <img
-            src="./../img/essenza.png"
-            alt="Logo Essenza"
-            width="80"
-            height="80"
-            class="d-inline-block align-text-top"
-          />
-        </a>
+          <!-- Logo -->
+          <a class="navbar-brand" href="./../../index.html">
+            <img
+              src="./../img/essenza.png"
+              alt="Logo Essenza"
+              width="80"
+              height="80"
+              class="d-inline-block align-text-top"
+            />
+          </a>
 
-        <!-- Botão Responsivo (Mobile) que faltava -->
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Alternar navegação"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- Botão Responsivo (Mobile) que faltava -->
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Alternar navegação"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <!-- Links da Navegação -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center gap-2">
-            <li class="nav-item">
-              <a
-                class="nav-link fs-5"
-                aria-current="page"
-                href="./../../index.html"
-                >Home</a
-              >
-            </li>
+          <!-- Links da Navegação -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center gap-2">
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-5"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link active fs-5" href="sobre.html">Sobre</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="sobre.html">Sobre</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="servicos.html"
-                >Serviços</a
-              >
-            </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="servicos.html"
+                  >Serviços</a
+                >
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link fs-5" href="servicos_produtos.html"
-                >Produtos</a
-              >
-            </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="servicos_produtos.html"
+                  >Produtos</a
+                >
+              </li>
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle fs-5"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Mais
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="fluxograma.html"
-                    >Fluxograma / Prog. e Alg.</a
-                  >
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle fs-5"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Mais
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="fluxograma.html"
+                      >Fluxograma / Prog. e Alg.</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="equipe.html"
+                      >Equipe</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                <a
+                  class="badge text-bg-warning" style="background-color: #D4AF37 !important; text-decoration: none; font-size: 1rem; padding: 0.5rem 0.8rem;"
+                  href="contatos.html"
+                >
+                  Contato
+                </a>
+              </li>
+
+                <li class="nav-item ms-lg-2" id="authNavItem">
+                    <a class="nav-link fs-5" href="login.html">
+                        <i class="bi bi-person-circle me-1"></i> Entrar
+                    </a>
                 </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="equipe.html">Equipe</a>
-                </li>
-              </ul>
-            </li>
 
-            <!-- Transformei o Contato em um Botão de Destaque (Call to Action) -->
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <a
-                class="badge text-bg-warning" style="background-color: #D4AF37 !important; text-decoration: none; font-size: 1rem; padding: 0.5rem 0.8rem;"
-                href="contatos.html"
-              >
-                Contato
-              </a>
-            </li>
-          </ul>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
     <!--parte principal do site-->
 
@@ -370,5 +378,6 @@
         }
       }
     </style>
+    <script src="./../js/auth-nav.js"></script>
   </body>
 </html>
