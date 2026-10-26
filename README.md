@@ -42,8 +42,10 @@ O projeto é totalmente fictício, sem nenhum direito real reservado e contém i
 Podemos verificar a situação atual com:
 git status
 
-Depois, adicionar os arquivos:
 git add .
 
 E criar o commit:
 git commit -m "(nome das mudanças)"
+
+https://profalonsogui.github.io/trilha-js-iniciantes/index.html
+https://github.com/profalonsogui/projeto_cafeteria/tree/main
