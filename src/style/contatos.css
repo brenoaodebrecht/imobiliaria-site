@@ -66,7 +66,7 @@ header nav {
     width: 55px; /* Tamanho equilibrado para um logotipo */
     height: 55px;
     object-fit: cover; /* Garante que a foto não fique distorcida ou esticada */
-    border-radius: 50%; /* Deixa a foto redonda (estilo premium) */
+    border-radius: 20px; /* Deixa a foto redonda (estilo premium) */
     border: 2px solid #b08d57; /* Borda fina dourada ao redor da foto */
 }
 
