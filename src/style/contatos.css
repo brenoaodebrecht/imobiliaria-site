@@ -199,6 +199,10 @@ a{
 /* ==========================================================================
    5. INTERATIVIDADE DOS CAMPOS E BOTÃO
    ========================================================================== */
+.phone-number{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .input-group {
     position: relative;
     width: 100%;
